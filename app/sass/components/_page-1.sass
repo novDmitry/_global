@@ -1,0 +1,81 @@
+@import "vars"
+
+.intro-banner
+    position: relative
+    display: flex
+    justify-content: space-between
+    &:before
+        content: ""
+        position: absolute
+        bottom: -2px
+        right: 12px
+        width: 100%
+        height: 2px
+        background-color: #151515
+    &:after
+        content: ""
+        position: absolute
+        bottom: -5px
+        left: 14px
+        width: 30px
+        height: 5px
+        background-color: $blue
+
+.intro-option
+    transition: 0.3s
+    width: 100%
+    h3
+        margin-top: 35px
+        font-size: 16px
+        text-transform: uppercase
+    display: flex
+    justify-content: space-between
+    a   
+        transition: color 0.3s
+        max-width: 268px
+        text-decoration: none
+        color: $grey
+        &:hover
+            color: #fff
+    p
+        font-size: 14px
+        font-weight: 500
+
+.row
+    height: 463px
+
+.text-title-l h1
+    max-width: 457px
+    line-height: 1
+    font-size: 68px
+    font-weight: 900
+    margin: 0
+        top: 50px
+    padding: 0
+
+.cat
+    cursor: pointer
+    bottom: 100px
+    left: 0px
+    padding: 12px 10px 12px 10px
+    color: #fff
+    background: none
+    border: none
+    position: absolute
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: 700
+    i
+        margin-left: 15px
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        right: 0
+        height: 100%
+        width: 83px
+        background-color: $blue
+        z-index: -1
+        transition: 0.3s
+    &:hover:before
+        width: 100%
