@@ -32,7 +32,7 @@ var initPageSlider = function initPageSlider() {
 	  });
 
 	  $slider.swipe({
-		swipe: function swipe(direction) {
+		swipe: function swipe(e, direction, distance, duration, fingerCount, fingerData) {
 		  if (direction == 'up') {
 			$slider.slick('slickNext');
 		  } else {
