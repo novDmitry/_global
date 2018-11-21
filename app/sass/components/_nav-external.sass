@@ -5,3 +5,108 @@
         position: absolute
         top: 0
         left: 0
+        list-style-position: inside
+        width: 120px
+        padding: 0
+        margin: 0
+        position: absolute
+        transform: translateY(-50%)
+        top: calc(50%)
+        height: 68%
+        display: flex
+        font-size: 6px
+        flex-direction: column
+        justify-content: space-between
+        max-height: 750px
+        button
+            outline: none
+            cursor: pointer
+            position: relative
+            opacity: 1
+            background: none
+            border: none
+            color: $color-bg
+            &:before
+                transition: 0.4s
+                font-size: 15px
+                content: "01"
+                position: absolute
+                top: 3px
+                left: 0
+                color: #555
+        li:nth-of-type(2)
+            button:before
+                content: "02"
+        li:nth-of-type(3)
+            button:before
+                content: "03"
+        li:nth-of-type(4)
+            button:before
+                content: "04"
+        li:nth-of-type(5)
+            button:before
+                content: "05"
+    .slick-dots .slick-active
+        color: #0f33ff
+        button
+            outline: none
+            cursor: pointer
+            position: relative
+            opacity: 1
+            background: none
+            border: none
+            color: none
+            &:before
+                content: "Home"
+                position: absolute
+                top: 3px
+                left: 0
+                color: #fff
+            &:after
+                font-size: 15px
+                content: "01"
+                position: absolute
+                top: 3px
+                left: -35px
+                color: #fff
+        &:nth-of-type(2)
+            button:before
+                content: "Work"
+            button:after
+                content: "02"
+        &:nth-of-type(3)
+            button:before
+                content: "About"
+            button:after
+                content: "03"
+        &:nth-of-type(4)
+            button:before
+                content: "Contacts"
+            button:after
+                content: "04"
+        &:nth-of-type(5)
+            button:before
+                content: "HireUs"
+            button:after
+                content: "05"
+
+
+.l-side-nav
+    position: absolute
+    left: 0
+    display: flex
+    height: 100%
+    width: 100px
+    align-items: center
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        width: 2px
+        height: 70%
+        transform: translateY(-50%)
+        max-height: 750px
+        background-color: #555
+        opacity: .35
+        z-index: 10
