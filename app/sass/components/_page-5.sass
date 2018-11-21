@@ -1,0 +1,119 @@
+@import "vars"
+
+.work-request__options
+    width: 100%
+    input
+        display: none
+    input:checked + label
+        background-color: $blue
+        outline: 2px solid $blue
+        i
+            font-size: 14px
+    label
+        cursor: pointer
+        display: block
+        text-align: center
+        line-height: 46px
+        font-size: 14px
+        width: 196px
+        height: 46px
+        outline: 2px solid #fff
+        transition: background 0.3s
+        i
+            font-size: 0px
+            padding-right: 9px
+            transition: 0.3s
+
+.title-hireus
+    text-align: center
+    font-size: 30px
+    margin-bottom: 50px
+
+.work-request
+    width: 100%
+
+.options-a
+    width: 100%
+    display: flex
+    font-weight: 600
+    justify-content: space-around
+.options-b
+    margin: auto
+    margin-top: 50px
+    width: 100%
+    max-width: 550px
+    display: flex
+    font-weight: 600
+    justify-content: space-around
+.options-c
+    margin: auto
+    margin-top: 50px
+    width: 100%
+    max-width: 196px
+    display: flex
+    font-weight: 600
+
+.info-inputs
+    padding-top: 60px
+    display: flex
+    width: 100%
+    justify-content: center
+    .info-name
+        padding-right: 80px
+        position: relative
+        input
+            width: 315px
+            height: 50px
+            outline: none
+            background: none
+            color: #fff
+            font-size: 22px
+            border: none
+                bottom: 2px solid #ffffff
+            &:focus + label
+                top: -12px
+                font-size: 16px
+        label
+            transition: 0.2s
+            position: absolute
+            font-size: 30px
+            top: 0
+            left: 0
+    .info-email
+        position: relative
+        input
+            width: 315px
+            height: 50px
+            outline: none
+            background: none
+            color: #fff
+            font-size: 22px
+            border: none
+                bottom: 2px solid #ffffff
+            &:focus + label
+                top: -12px
+                font-size: 16px
+        label
+            transition: 0.2s
+            position: absolute
+            font-size: 30px
+            top: 0
+            left: 0
+
+.info__btn
+    padding-top: 65px
+    display: flex
+    justify-content: center
+
+.info-send
+    cursor: pointer
+    margin-top: 20px
+    width: 400px
+    height: 50px
+    background: $blue
+    color: #fff
+    font-weight: 500
+    line-height: 50px
+    font-size: 18px
+    text-transform: uppercase
+    text-align: center
