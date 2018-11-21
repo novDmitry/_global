@@ -1,0 +1,73 @@
+@import "vars"
+
+.header
+    z-index: 99
+    padding-top: 30px
+    padding-right: 50px
+    padding-left: 50px
+    display: flex
+    position: absolute
+    justify-content: space-between
+    width: 100%
+    a
+        text-decoration: none
+
+button.full
+    cursor: pointer
+    color: #ffffff
+    height: 30px
+    text-transform: uppercase
+    font-size: 13px
+    font-weight: 800
+    line-height: .6
+    border: none
+    background-color: #0f33ff
+    padding: 12px 20px
+    margin-right: 60px
+    
+
+.header-logo
+    display: flex
+    height: 28px
+    font-size: 17px
+    font-weight: 600
+    p
+        text-transform: uppercase
+        color: #fff
+        margin: 0px 0px 0px 5px
+
+.header-nav
+    z-index: 1
+    cursor: pointer
+    width: 50px
+    height: 50px
+    margin-top: -15px
+    position: relative
+    float: right
+    span
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        width: 20px
+        height: 2px
+        background-color: #fff
+    &:before
+        content: ""
+        position: absolute
+        top: 17px
+        left: 50%
+        transform: translateX(-50%)
+        width: 24px
+        height: 2px
+        background-color: #fff
+    &:after
+        content: ""
+        position: absolute
+        bottom: 17px
+        left: 50%
+        transform: translateX(-50%)
+        width: 24px
+        height: 2px
+        background-color: #fff

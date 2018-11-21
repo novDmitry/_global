@@ -7,8 +7,17 @@ var initPageSlider = function initPageSlider() {
 	$slider.slick({
 		slidesToShow: 1,
 		fade: true,
+		speed: 600,
 		arrows: false,
 		dots: true
+	});
+
+	$('.outer-nav').slick({
+		arrows: false,
+		asNavFor: '.js-page-slider',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
 	});
 
 	$slider.mousewheel(function (e) {
@@ -52,6 +61,31 @@ var initWorkSlider = function initWorkSlider() {
     nextArrow: '<span class="work-arrow is-next">\n                  <i class="fas fa-arrow-right"></i>\n                </span>'
   });
 };
+
+var animate_container = document.getElementsByClassName("perspective-modalview")[0];
+function showanimate_container(){
+	animate_container.style.cssText = "transform: translateZ(-1800px) translateX(-50%) rotateY(45deg); border: 0px solid #0f33ff;";
+	animate_container.style.transformOrigin = "left";
+}
+function hideanimate_container(){
+	animate_container.style.cssText = "transform: none; border: 0px solid #0f33ff;"
+}
+
+var viewport = document.getElementsByClassName("viewport")[0];
+function showviewport(){
+	viewport.style.cssText = "display: block";
+}
+function hideviewport(){
+	viewport.style.cssText = "display: none";
+}
+
+var outernav = document.getElementsByClassName("outer-nav")[0];
+function shownav(){
+	outernav.style.cssText = "opacity: 1; transform: translateY(-50%)";
+}
+function hidenav(){
+	outernav.style.cssText = "opacity: 0; transform: translateY(-50%) translateZ(-700px)";
+}
 
 $(document).ready(function () {
 	initPageSlider();
