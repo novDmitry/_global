@@ -34,6 +34,26 @@ var initPageSlider = function initPageSlider() {
 		});
 };
 
+var initWorkSlider = function initWorkSlider() {
+  var $wrapper = $('.js-work-slider'),
+      $slide1 = $wrapper.find('.js-slide-1').html(),
+      $slide2 = $wrapper.find('.js-slide-2').html(),
+      $slide3 = $wrapper.find('.js-slide-3').html();
+
+  $wrapper.html(' ');
+
+  $('<div>').appendTo($wrapper).append($slide1).append($slide2).append($slide3);
+  $('<div>').appendTo($wrapper).append($slide2).append($slide3).append($slide1);
+  $('<div>').appendTo($wrapper).append($slide3).append($slide1).append($slide2);
+
+  $('.js-work-slider').slick({
+    fade: true,
+    prevArrow: '<span class="work-arrow is-prev">\n                  <i class="fas fa-arrow-left"></i>\n                </span>',
+    nextArrow: '<span class="work-arrow is-next">\n                  <i class="fas fa-arrow-right"></i>\n                </span>'
+  });
+};
+
 $(document).ready(function () {
 	initPageSlider();
+	initWorkSlider();
 });
